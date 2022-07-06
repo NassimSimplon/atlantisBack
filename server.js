@@ -26,7 +26,8 @@
   const video = require('./videos/route')
    app.use('/Atlantis',video)
 
- //PORT
- app.listen(4000,()=>{
-    console.log('Server is Running');
- })
+   const PORT = process.env.PORT || 5000;
+   //PORT
+   app.listen(PORT,()=>{
+      console.log('Server is Running');
+   })
