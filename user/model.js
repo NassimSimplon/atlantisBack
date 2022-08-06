@@ -15,7 +15,14 @@ module.exports = mongoose.model('users',new Schema({
     password:{
         type:String,
         required:true
-    },
+    },latitude:{
+      type:String,
+      required:true
+  },
+    longitude:{
+      type:String,
+      required:true
+  },
     cours:[ {
       introTitle: { type: String },
       introParagraphe: { type: String },
