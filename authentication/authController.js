@@ -19,6 +19,8 @@ module.exports = {
         const salt = await new bcrypt.genSalt(10)
         const password = await new bcrypt.hash(req.body.password, salt);
         const cours = req.body.cours
+        const latitude= req.body.latitude
+        const longitude = req.body.longitude
  
         const _user = new USER({
       
@@ -26,7 +28,9 @@ module.exports = {
         image,
      
         email,
-        password  
+        password  ,
+        latitude,
+        longitude
 ,cours
       
        });
